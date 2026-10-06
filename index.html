@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>lsisan1212 · 專案入口</title>
+<meta name="description" content="lsisan1212 的專案入口 —— 所有 GitHub Pages 與線上作品一覽">
+<style>
+  :root{--radius:14px;--maxw:1160px;--font:system-ui,-apple-system,"Segoe UI",Roboto,"PingFang TC","Microsoft YaHei",sans-serif;}
+  html[data-theme="dark"]{
+    --bg:#0b0f14;--bg2:#0f151c;--panel:#141b23;--panel2:#1b242e;
+    --text:#e8eef5;--muted:#8fa0b3;--accent:#4fc3f7;--accent-text:#04212e;
+    --border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.22);
+    --shadow:0 8px 24px rgba(0,0,0,.38);
+  }
+  html[data-theme="light"]{
+    --bg:#f5f7fa;--bg2:#ffffff;--panel:#ffffff;--panel2:#eef2f7;
+    --text:#111a24;--muted:#57697d;--accent:#1565c0;--accent-text:#ffffff;
+    --border:rgba(0,0,0,.10);--border2:rgba(0,0,0,.22);
+    --shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+  html[data-theme="ocean"]{
+    --bg:#04121f;--bg2:#071c2c;--panel:#0a2436;--panel2:#0f3247;
+    --text:#e3f3ff;--muted:#8db4d0;--accent:#67e8f9;--accent-text:#052027;
+    --border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.22);
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+  html[data-theme="sunset"]{
+    --bg:#1d1018;--bg2:#26141f;--panel:#331a28;--panel2:#432233;
+    --text:#fceef4;--muted:#c19cae;--accent:#fbbf24;--accent-text:#2a1a04;
+    --border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.22);
+    --shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;
+       display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  header{position:sticky;top:0;z-index:10;background:var(--bg2);border-bottom:1px solid var(--border);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;width:100%;}
+  .bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 0;}
+  .brand{display:flex;align-items:baseline;gap:10px;margin-right:auto;}
+  .brand h1{margin:0;font-size:20px;font-weight:800;letter-spacing:.5px;color:var(--accent);}
+  .brand span{font-size:12.5px;color:var(--muted);}
+  .themes{display:flex;gap:6px;}
+  .theme{background:var(--panel);color:var(--muted);border:1px solid var(--border);border-radius:999px;
+         padding:5px 12px;font-size:12px;cursor:pointer;font-family:inherit;transition:.15s;}
+  .theme:hover{border-color:var(--border2);color:var(--text);}
+  .theme[aria-pressed="true"]{background:var(--accent);color:var(--accent-text);border-color:var(--accent);font-weight:700;}
+  .search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);
+          border-radius:10px;padding:7px 12px;min-width:220px;}
+  .search input{background:transparent;border:0;outline:0;color:var(--text);font-family:inherit;font-size:13.5px;width:100%;}
+  .search input::placeholder{color:var(--muted);}
+  main{flex:1;padding:22px 0 40px;}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+  .chip{background:var(--panel);color:var(--muted);border:1px solid var(--border);border-radius:999px;
+        padding:5px 13px;font-size:12.5px;cursor:pointer;font-family:inherit;transition:.15s;}
+  .chip:hover{border-color:var(--border2);color:var(--text);}
+  .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-text);border-color:var(--accent);font-weight:700;}
+  .meta{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12.5px;
+        color:var(--muted);margin-bottom:14px;flex-wrap:wrap;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .card{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--border);
+        border-left:3px solid var(--card-accent,var(--accent));border-radius:var(--radius);padding:18px;
+        transition:.18s;box-shadow:var(--shadow);}
+  .card:hover{transform:translateY(-3px);border-color:var(--border2);}
+  .card .top{display:flex;align-items:center;gap:12px;}
+  .card .ico{font-size:26px;line-height:1;}
+  .card h2{margin:0;font-size:16px;font-weight:700;}
+  .host{font-size:11.5px;color:var(--muted);word-break:break-all;}
+  .card p{margin:0;font-size:13px;line-height:1.65;color:var(--muted);}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{font-size:11.5px;color:var(--muted);background:var(--panel2);border:1px solid var(--border);
+       border-radius:999px;padding:2px 9px;}
+  .card .go{margin-top:auto;font-size:13px;font-weight:700;color:var(--card-accent,var(--accent));
+            display:flex;align-items:center;gap:6px;}
+  .empty{text-align:center;padding:52px 20px;border:1px dashed var(--border2);border-radius:var(--radius);color:var(--muted);}
+  .empty strong{display:block;color:var(--text);font-size:15px;margin-bottom:6px;}
+  footer{border-top:1px solid var(--border);padding:16px 0;font-size:12px;color:var(--muted);}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand">
+        <h1 id="siteTitle">lsisan1212</h1>
+        <span id="siteSub">專案入口 · GitHub Pages 與線上作品一覽</span>
+      </div>
+      <div class="themes" id="themes">
+        <button class="theme" data-set="dark" aria-pressed="true">深色</button>
+        <button class="theme" data-set="light" aria-pressed="false">淺色</button>
+        <button class="theme" data-set="ocean" aria-pressed="false">海洋</button>
+        <button class="theme" data-set="sunset" aria-pressed="false">日落</button>
+      </div>
+      <label class="search">
+        <span aria-hidden="true">🔍</span>
+        <input id="q" type="search" placeholder="搜尋專案 / 標籤…" autocomplete="off">
+      </label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="chips" id="chips"></div>
+    <div class="meta">
+      <span id="count">載入中…</span>
+      <span id="src"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <strong>搵唔到符合嘅專案</strong>
+      <span>試下換個關鍵字，或者清空搜尋框。</span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>lsisan1212 · 專案入口</span>
+    <span id="foot"></span>
+  </div>
+</footer>
+
+<script>
+const OWNER = 'lsisan1212';
+
+const FALLBACK = {
+  site: { title: 'lsisan1212', subtitle: '專案入口 · GitHub Pages 與線上作品一覽', profile: 'https://github.com/lsisan1212' },
+  sites: [
+    { title: 'Games', desc: '單檔網頁遊戲合集。', url: 'https://lsisan1212.github.io/Games/', repo: 'Games', cat: '遊戲', emoji: '🎮', accent: '#ffd54f', tags: ['遊戲'] },
+    { title: 'Paper Trade Dashboard', desc: '量化策略模擬盤績效儀表板。', url: 'https://lsisan1212.github.io/papertade/', repo: 'papertade', cat: '量化', emoji: '📈', accent: '#4fc3f7', tags: ['量化'] },
+    { title: 'BodyTrainer', desc: '居家健身訓練入口。', url: 'https://lsisan1212.github.io/BodyTrainer/', repo: 'BodyTrainer', cat: '工具', emoji: '💪', accent: '#97C459', tags: ['健身'] },
+    { title: 'EdgeEver', desc: '開源自託管 Evernote 替代品。', url: 'https://edgeever.org', repo: 'edgeever', cat: '其他', emoji: '☁️', accent: '#7F77DD', tags: ['開源'] }
+  ]
+};
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
+  c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const prettyName = f => f.replace(/\.html?$/i, '').replace(/[-_]+/g, ' ')
+  .replace(/([a-z0-9])([A-Z])/g, '$1 $2').trim();
+const host = u => { try { return new URL(u).host + new URL(u).pathname; } catch (e) { return u; } };
+
+const state = { site: FALLBACK.site, sites: [], cat: '全部' };
+
+function chips() {
+  const cats = ['全部', ...Array.from(new Set(state.sites.map(s => s.cat || '其他')))];
+  if (!cats.includes(state.cat)) state.cat = '全部';
+  document.getElementById('chips').innerHTML = cats.map(c =>
+    `<button class="chip" data-cat="${esc(c)}" aria-pressed="${String(c === state.cat)}">${esc(c)}</button>`
+  ).join('');
+}
+
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const list = state.sites.filter(s => {
+    if (state.cat !== '全部' && (s.cat || '其他') !== state.cat) return false;
+    if (!q) return true;
+    return [s.title, s.desc, s.repo, s.url, s.cat, (s.tags || []).join(' ')]
+      .join(' ').toLowerCase().includes(q);
+  });
+
+  document.getElementById('count').textContent =
+    (state.cat === '全部' && !q)
+      ? `共 ${state.sites.length} 個專案`
+      : `顯示 ${list.length} / ${state.sites.length} 個專案`;
+  document.getElementById('empty').hidden = list.length !== 0;
+
+  document.getElementById('grid').innerHTML = list.map(s => `
+    <a class="card" href="${esc(s.url)}" target="_blank" rel="noopener"
+       style="--card-accent:${esc(s.accent || 'var(--accent)')}">
+      <div class="top">
+        <span class="ico" aria-hidden="true">${esc(s.emoji || '🔗')}</span>
+        <h2>${esc(s.title)}</h2>
+      </div>
+      <span class="host">${esc(host(s.url))}</span>
+      ${s.desc ? `<p>${esc(s.desc)}</p>` : ''}
+      ${(s.tags && s.tags.length) ? `<div class="tags">${s.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
+      <span class="go">開啟 →</span>
+    </a>`).join('');
+}
+
+async function load() {
+  let manifest = null;
+  try {
+    const r = await fetch('sites.json', { cache: 'no-store' });
+    if (r.ok) manifest = await r.json();
+  } catch (e) { /* file:// 或 fetch 被擋 → fallback */ }
+
+  const base = (manifest && Array.isArray(manifest.sites)) ? manifest : FALLBACK;
+  state.site = base.site || FALLBACK.site;
+  state.sites = (base.sites || []).slice();
+  document.getElementById('src').textContent = manifest ? '' : '（離線模式：用內建精簡清單）';
+
+  document.title = `${state.site.title} · 專案入口`;
+  document.getElementById('siteTitle').textContent = state.site.title;
+  document.getElementById('siteSub').textContent = state.site.subtitle || '';
+  chips(); render();
+
+  try {
+    const r2 = await fetch(`https://api.github.com/users/${OWNER}/repos?per_page=100&sort=updated`, { cache: 'no-store' });
+    if (r2.ok) {
+      const repos = await r2.json();
+      const known = new Set(state.sites.map(s => (s.repo || '').toLowerCase()));
+      let added = 0;
+      for (const rp of repos) {
+        if (rp.private || rp.fork) continue;
+        const n = rp.name;
+        if (known.has(n.toLowerCase())) continue;
+        if (n.toLowerCase() === 'index') continue;
+        state.sites.push({
+          title: prettyName(n),
+          desc: rp.description || '（自動偵測 · 未加入 sites.json）',
+          url: rp.homepage || rp.html_url,
+          repo: n, cat: '自動偵測', emoji: '🆕',
+          accent: '#888780', tags: ['自動偵測']
+        });
+        added++;
+      }
+      if (added) { chips(); render(); }
+    }
+  } catch (e) { /* 離線 / rate limit，忽略 */ }
+
+  document.getElementById('foot').innerHTML =
+    `<a href="${esc(state.site.profile)}" target="_blank" rel="noopener">${esc(state.site.profile)}</a>`;
+}
+
+document.getElementById('themes').addEventListener('click', e => {
+  const b = e.target.closest('.theme');
+  if (b) setTheme(b.dataset.set);
+});
+document.getElementById('chips').addEventListener('click', e => {
+  const b = e.target.closest('.chip');
+  if (b) { state.cat = b.dataset.cat; chips(); render(); }
+});
+document.getElementById('q').addEventListener('input', render);
+
+const THEME_KEY = 'index-theme';
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  document.querySelectorAll('.theme').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.set === t)));
+  try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
+}
+try { const s = localStorage.getItem(THEME_KEY); if (s) setTheme(s); } catch (e) {}
+
+load();
+</script>
+</body>
+</html>
