@@ -56,16 +56,6 @@
       "tags": ["播放器"]
     },
     {
-      "title": "Fluid Mobile Web Wrapper",
-      "desc": "流動版網頁包裝器（iframe srcdoc），把桌面網頁塞入手機寬度。",
-      "url": "https://lsisan1212.github.io/weblayoutrearrange/",
-      "repo": "weblayoutrearrange",
-      "cat": "工具",
-      "emoji": "📱",
-      "accent": "#5DCAA5",
-      "tags": ["響應式", "iframe"]
-    },
-    {
       "title": "Harness Bookmark Manager",
       "desc": "書籤管理工具。",
       "url": "https://lsisan1212.github.io/bookmark/",

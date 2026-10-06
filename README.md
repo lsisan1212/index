@@ -21,7 +21,6 @@
 | 工具 | BodyTrainer | https://lsisan1212.github.io/BodyTrainer/ |
 | 工具 | MPA 我的專案傳送門 | https://lsisan1212.github.io/MPA/ |
 | 工具 | HTML5 AI Player | https://lsisan1212.github.io/html-player/ |
-| 工具 | Fluid Mobile Web Wrapper | https://lsisan1212.github.io/weblayoutrearrange/ |
 | 工具 | Harness Bookmark Manager | https://lsisan1212.github.io/bookmark/ |
 | 工具 | Markdown Notebook | https://lsisan1212.github.io/MDnote/ |
 | 其他 | XBX 檔案目錄 | https://lsisan1212.github.io/xbx/ |
