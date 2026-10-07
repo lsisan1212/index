@@ -94,6 +94,16 @@
       "emoji": "📁",
       "accent": "#B4B2A9",
       "tags": ["XBX", "目錄"]
+    },
+    {
+      "title": "Language Convertor",
+      "desc": "English ⇄ 中文 轉換器：單檔零依賴、離線可用。",
+      "url": "https://lsisan1212.github.io/Language-Convertor/",
+      "repo": "Language-Convertor",
+      "cat": "工具",
+      "emoji": "🔤",
+      "accent": "#38bdf8",
+      "tags": ["翻譯", "轉換", "語言"]
     }
   ]
 }
