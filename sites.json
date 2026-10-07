@@ -6,6 +6,16 @@
   },
   "sites": [
     {
+      "title": "StartPage",
+      "desc": "自訂起始頁：書籤、搜尋、主題，單檔零依賴、離線可用。",
+      "url": "https://lsisan1212.github.io/StartPage/",
+      "repo": "StartPage",
+      "cat": "工具",
+      "emoji": "🏠",
+      "accent": "#7c8cf8",
+      "tags": ["起始頁", "書籤", "導航"]
+    },
+    {
       "title": "Games",
       "desc": "單檔網頁遊戲合集：Rummikub 拉密等，零依賴、離線可用。",
       "url": "https://lsisan1212.github.io/Games/",
