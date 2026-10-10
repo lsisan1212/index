@@ -106,26 +106,6 @@
       "tags": ["翻譯", "轉換", "語言"]
     },
     {
-      "title": "EdgeEver",
-      "desc": "Serverless、0 費用、開源自託管的 Evernote 替代品（Cloudflare + 原生 MCP）。",
-      "url": "https://edgeever.org",
-      "repo": "edgeever",
-      "cat": "其他",
-      "emoji": "☁️",
-      "accent": "#7F77DD",
-      "tags": ["開源", "Cloudflare", "筆記"]
-    },
-    {
-      "title": "Gemini Balance Lite",
-      "desc": "Gemini 相關小工具（Vercel 託管，repo 為 private）。",
-      "url": "https://geminibalancelite-nine.vercel.app",
-      "repo": "geminibalancelite",
-      "cat": "其他",
-      "emoji": "⚖️",
-      "accent": "#E24B4A",
-      "tags": ["Vercel", "Gemini"]
-    },
-    {
       "title": "PDF Split",
       "desc": "純前端線上 PDF 分割工具，零依賴、離線可用。",
       "url": "https://lsisan1212.github.io/pdfsplit/pdfSplit.html",
