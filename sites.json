@@ -13,7 +13,11 @@
       "cat": "工具",
       "emoji": "🏠",
       "accent": "#7c8cf8",
-      "tags": ["起始頁", "書籤", "導航"]
+      "tags": [
+        "起始頁",
+        "書籤",
+        "導航"
+      ]
     },
     {
       "title": "Games",
@@ -23,7 +27,10 @@
       "cat": "遊戲",
       "emoji": "🎮",
       "accent": "#ffd54f",
-      "tags": ["遊戲", "Rummikub"]
+      "tags": [
+        "遊戲",
+        "Rummikub"
+      ]
     },
     {
       "title": "Paper Trade Dashboard",
@@ -33,7 +40,11 @@
       "cat": "量化",
       "emoji": "📈",
       "accent": "#4fc3f7",
-      "tags": ["量化", "模擬盤", "儀表板"]
+      "tags": [
+        "量化",
+        "模擬盤",
+        "儀表板"
+      ]
     },
     {
       "title": "BodyTrainer",
@@ -43,7 +54,10 @@
       "cat": "工具",
       "emoji": "💪",
       "accent": "#97C459",
-      "tags": ["健身", "計時"]
+      "tags": [
+        "健身",
+        "計時"
+      ]
     },
     {
       "title": "MPA · 我的專案傳送門",
@@ -53,7 +67,10 @@
       "cat": "工具",
       "emoji": "🧭",
       "accent": "#AFA9EC",
-      "tags": ["傳送門", "導航"]
+      "tags": [
+        "傳送門",
+        "導航"
+      ]
     },
     {
       "title": "HTML5 AI Player",
@@ -63,7 +80,9 @@
       "cat": "工具",
       "emoji": "▶️",
       "accent": "#EF9F27",
-      "tags": ["播放器"]
+      "tags": [
+        "播放器"
+      ]
     },
     {
       "title": "Harness Bookmark Manager",
@@ -73,7 +92,10 @@
       "cat": "工具",
       "emoji": "🔖",
       "accent": "#F0997B",
-      "tags": ["書籤", "整理"]
+      "tags": [
+        "書籤",
+        "整理"
+      ]
     },
     {
       "title": "Markdown Notebook",
@@ -83,7 +105,10 @@
       "cat": "工具",
       "emoji": "📝",
       "accent": "#85B7EB",
-      "tags": ["Markdown", "筆記"]
+      "tags": [
+        "Markdown",
+        "筆記"
+      ]
     },
     {
       "title": "XBX 檔案目錄",
@@ -93,7 +118,10 @@
       "cat": "其他",
       "emoji": "📁",
       "accent": "#B4B2A9",
-      "tags": ["XBX", "目錄"]
+      "tags": [
+        "XBX",
+        "目錄"
+      ]
     },
     {
       "title": "Language Convertor",
@@ -103,7 +131,11 @@
       "cat": "工具",
       "emoji": "🔤",
       "accent": "#38bdf8",
-      "tags": ["翻譯", "轉換", "語言"]
+      "tags": [
+        "翻譯",
+        "轉換",
+        "語言"
+      ]
     },
     {
       "title": "PDF Split",
@@ -113,7 +145,25 @@
       "cat": "工具",
       "emoji": "🗂️",
       "accent": "#E24B4A",
-      "tags": ["PDF", "工具"]
+      "tags": [
+        "PDF",
+        "工具"
+      ]
+    },
+    {
+      "title": "SysBar",
+      "desc": "macOS 菜單列系統監控：CPU / RAM / 磁碟使用率單行顯示，原生 Swift 零依賴，開機自啟。",
+      "url": "https://github.com/lsisan1212/sysbar",
+      "repo": "sysbar",
+      "cat": "工具",
+      "emoji": "📊",
+      "accent": "#34c759",
+      "tags": [
+        "macOS",
+        "菜單列",
+        "監控",
+        "Swift"
+      ]
     }
   ]
 }
