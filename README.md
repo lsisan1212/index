@@ -24,6 +24,8 @@
 | 工具 | Harness Bookmark Manager | https://lsisan1212.github.io/bookmark/ |
 | 工具 | Markdown Notebook | https://lsisan1212.github.io/MDnote/ |
 | 其他 | XBX 檔案目錄 | https://lsisan1212.github.io/xbx/ |
+| 工具 | yapdictate | https://github.com/lsisan1212/yapdictate-share |
+| 其他 | BiBi Keyboard 研究報告 | https://github.com/lsisan1212/bibi-keyboard-research |
 | 其他 | EdgeEver | https://edgeever.org |
 | 其他 | Gemini Balance Lite | https://geminibalancelite-nine.vercel.app |
 

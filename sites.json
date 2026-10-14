@@ -164,6 +164,35 @@
         "監控",
         "Swift"
       ]
+    },
+    {
+      "title": "yapdictate",
+      "desc": "macOS 熱鍵語音輸入：⌃D 一鍵聽寫，本地 SenseVoice ASR 轉繁體中文，全程離線零雲端。",
+      "url": "https://github.com/lsisan1212/yapdictate-share",
+      "repo": "yapdictate-share",
+      "cat": "工具",
+      "emoji": "🎙️",
+      "accent": "#af52de",
+      "tags": [
+        "macOS",
+        "語音輸入",
+        "ASR",
+        "離線"
+      ]
+    },
+    {
+      "title": "BiBi Keyboard 研究報告",
+      "desc": "BiBi Keyboard（說點啥）研究：繁中介面、一鍵切換輸入法、MCKP 合併可行性分析。",
+      "url": "https://github.com/lsisan1212/bibi-keyboard-research",
+      "repo": "bibi-keyboard-research",
+      "cat": "其他",
+      "emoji": "⌨️",
+      "accent": "#5DCAA5",
+      "tags": [
+        "Android",
+        "輸入法",
+        "研究"
+      ]
     }
   ]
 }
